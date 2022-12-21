@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MovieController!{% endblock %}
+
+{% block body %}
+    <form method="POST">
+        <input type="text" name="search" id="search">
+        <button type="submit">Rechercher</button>
+    </form>
+    <ul>
+        {% for movie in movies %}
+            <li>{{ movie.title }} - {{ movie.year }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
